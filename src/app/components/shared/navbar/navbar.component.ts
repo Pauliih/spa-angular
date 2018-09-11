@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  constructor() { }
+  
+  constructor() {
+   
+   }
 
-
+   buscarHeroe(heroe: string){
+    console.log("TERMINO: " + heroe);
+  }
 }
