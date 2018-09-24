@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,12 +8,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  
-  constructor() {
-   
-   }
+  constructor(
+    private router: Router,
+  ) { }
 
-   buscarHeroe(heroe: string){
-    console.log("TERMINO: " + heroe);
+  buscarHeroe(texto: string){   
+    let nombreHero = texto;
+    this.router.navigate(['/search', nombreHero]);
   }
 }
